@@ -4,17 +4,28 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 export class Task {
 
     @PrimaryGeneratedColumn()
-    private id!: number;
+    public id!: number;
 
     @Column()
-    private title: string;
+    public title: string;
 
     @Column()
-    private description: string;
+    public description: string;
 
     constructor(title: string, description: string) {
         this.title = title;
         this.description = description;
     }
-}
 
+    get getId(): number {
+        return this.id;
+    }
+
+    get getTitle(): string {
+        return this.title;
+    }
+
+    get getDescription(): string {
+        return this.description;
+    }
+}
