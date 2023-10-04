@@ -2,7 +2,7 @@ import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common'
 import { Task } from 'src/entities/task.entity';
 import { TaskService } from 'src/services/task.service';
 
-@Controller('tasks')
+@Controller('/tasks')
 export class TaskController {
     constructor(private readonly taskService: TaskService) {
     }
